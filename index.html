@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plane Battle</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <main class="app-shell">
+    <section class="hero-panel">
+      <div class="brand-row">
+        <span class="brand-badge">PB</span>
+        <div>
+          <p class="eyebrow">Plane Battle</p>
+          <h1>空战指挥中心</h1>
+        </div>
+      </div>
+      <p class="hero-copy">一个可直接演示的默认界面。先登录，再查看战机编队、任务简报和模拟数据面板。</p>
+      <div class="feature-row">
+        <div class="feature-card">
+          <span class="feature-label">战机数</span>
+          <strong>12</strong>
+        </div>
+        <div class="feature-card">
+          <span class="feature-label">任务状态</span>
+          <strong>待命</strong>
+        </div>
+        <div class="feature-card">
+          <span class="feature-label">在线率</span>
+          <strong>99.8%</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="login-panel" aria-label="login">
+      <div class="login-card" id="login-card">
+        <div class="login-header">
+          <p class="eyebrow">Demo Login</p>
+          <h2>登录查看效果</h2>
+          <p>演示账号：<span class="inline-code">pilot</span> / <span class="inline-code">123456</span></p>
+        </div>
+        <form id="login-form" class="login-form">
+          <label>
+            <span>用户名</span>
+            <input id="username" name="username" type="text" placeholder="请输入用户名" autocomplete="username" required>
+          </label>
+          <label>
+            <span>密码</span>
+            <input id="password" name="password" type="password" placeholder="请输入密码" autocomplete="current-password" required>
+          </label>
+          <button type="submit" class="primary-btn">登录</button>
+          <p class="hint">登录后进入右侧仪表盘，页面会切换为可查看状态。</p>
+        </form>
+      </div>
+
+      <div class="dashboard-card hidden" id="dashboard-card">
+        <div class="dashboard-top">
+          <div>
+            <p class="eyebrow success">Authenticated</p>
+            <h2>欢迎回来，指挥官</h2>
+          </div>
+          <button id="logout-btn" class="ghost-btn" type="button">退出</button>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="info-card accent-cyan">
+            <span class="info-title">任务简报</span>
+            <strong>护航演练</strong>
+            <p>当前演示环境已解锁，可继续替换为真实业务内容。</p>
+          </article>
+          <article class="info-card accent-green">
+            <span class="info-title">编队状态</span>
+            <strong>3 组在线</strong>
+            <p>默认界面保留清晰层级，方便后续接入真实数据。</p>
+          </article>
+          <article class="info-card accent-orange">
+            <span class="info-title">告警</span>
+            <strong>0 条</strong>
+            <p>登录仅为本地模拟，不会连接后端服务。</p>
+          </article>
+        </div>
+
+        <div class="action-row">
+          <a href="#" class="primary-btn secondary">进入项目详情</a>
+          <a href="#" class="ghost-link">查看数据面板</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
